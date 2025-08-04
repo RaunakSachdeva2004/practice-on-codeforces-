@@ -1,0 +1,29 @@
+import java.util.*;
+public class string_task{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+
+        String res= processString(input);
+        System.out.println(res);
+    }
+
+    public static String processString(String s){
+        String slower = s.toLowerCase();
+
+        StringBuilder res = new StringBuilder();
+        String vowels = "aeiouy";
+
+        for(int i = 0; i<slower.length();i++){
+            char curr  = slower.charAt(i);
+
+            if(vowels.indexOf(curr) == -1){
+                res.append(".");
+                res.append(curr);
+            }
+        }
+        return res.toString();
+    }
+
+    
+}
