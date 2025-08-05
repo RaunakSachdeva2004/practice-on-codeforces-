@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class HelpfulMaths {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String sum = sc.nextLine();
+
+        String[] arr = sum.split("\\+");
+        Arrays.sort(arr);
+
+        String newSum = String.join("+", arr);
+        System.out.println(newSum);
+        sc.close();
+
+
+    }
+
+}
