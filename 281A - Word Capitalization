@@ -1,0 +1,12 @@
+import java.util.*;
+public class Capitilaziation{
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String input = sc.nextLine();
+        String cap = Character.toUpperCase(input.charAt(0)) + input.substring(1);
+        System.out.println(cap);
+        sc.close();
+    }
+}
