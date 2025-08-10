@@ -1,0 +1,31 @@
+import java.util.*;
+public class twins{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // no. of coins
+        int[] coins = new int[n];
+
+        int count = 0; 
+        int totalsum = 0; 
+        int mysum = 0;
+
+        for(int i = 0; i < n; i++){
+            coins[i] = sc.nextInt();
+            totalsum += coins[i];
+        }
+
+        Arrays.sort(coins);
+
+        for(int i = n-1; i>=0; i--){
+            mysum += coins[i];
+            count++;
+
+            if(mysum > totalsum-mysum){
+                break;
+            }
+        }
+
+        System.out.println(count);
+        sc.close();
+    }
+}
