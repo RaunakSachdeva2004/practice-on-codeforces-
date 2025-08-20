@@ -1,0 +1,35 @@
+import java.util.*;
+public class petya_and_coutside {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int heights[] = new int[n];
+        for(int  i = 0 ;i<n; i++){
+            heights[i] = sc.nextInt();
+        }
+
+        int max =0;
+        
+        for(int i = 0; i<n; i++){
+            int curr = 1;
+            
+            //rightward water
+            for(int j = 0; j< n-1 ;j++){
+                if(heights[j+1] <= heights[j])  curr++;
+                else break;
+            }
+
+            //leftward water
+            for(int j = i; j>0 ;j--){
+                if(heights[j-1] <= heights[j])  curr++;
+                else break;
+            }
+
+            if(curr>max)  max  = curr;
+        }
+
+        System.out.println(max);
+        sc.close();
+
+    }
+}
