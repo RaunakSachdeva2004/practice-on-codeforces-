@@ -10,7 +10,7 @@ public class function{
             res = n/2;
         }
         else{
-            res = -(n-1) / 2;
+            res = -(n+1) / 2;
 
         }
 
